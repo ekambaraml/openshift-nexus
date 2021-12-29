@@ -1,7 +1,10 @@
-oc new-project nexus
-oc new-app sonatype/nexus:oss
+### Starting Nexus Repostory Manager Within OpenShift Cluster
 
-oc expose svc/nexus
+### 1. oc new-project nexus
+
+### 2. oc new-app sonatype/nexus:oss
+
+### 3. oc expose svc/nexus
 ```
 --> Found container image a914737 (11 days old) from Docker Hub for "sonatype/nexus:oss"
 
@@ -23,8 +26,8 @@ oc expose svc/nexus
     Run 'oc status' to view your app.
  ```
  
- oc project nexus
- oc get all
+ ### 4. oc project nexus
+ ### 5. oc get all
  ```
  NAME                         READY   STATUS    RESTARTS   AGE
 pod/nexus-5db7c57f99-mgt8p   1/1     Running   0          42s
@@ -47,7 +50,7 @@ route.route.openshift.io/nexus   nexus-nexus.apps.lxmlops.cp.fyre.ibm.com       
 
 ```
 
-oc get is
+### 6.0 oc get is
 
 ```
 NAME    IMAGE REPOSITORY                                                                  TAGS   UPDATED
@@ -55,19 +58,19 @@ nexus   default-route-openshift-image-registry.apps.lxmlops.cp.fyre.ibm.com/nexu
 ```
 
 
-oc get pods
+### 7.0 oc get pods
 ```
 NAME                     READY   STATUS    RESTARTS   AGE
 nexus-5db7c57f99-mgt8p   1/1     Running   0          3m58s
 ```
 
-oc get routes
+### 8.0 oc get routes
 ```
 NAME    HOST/PORT                                  PATH   SERVICES   PORT       TERMINATION   WILDCARD
 nexus   nexus-nexus.apps.lxmlops.cp.fyre.ibm.com          nexus      8081-tcp                 None
 ```
 
-Accessing the Repository Manager
+### 9.0 Accessing the Repository Manager
 
-[Nexus](
-http://nexus-nexus.apps.lxmlops.cp.fyre.ibm.com/nexus/#welcome
+![Nexus](https://github.com/ekambaraml/openshift-nexus/blob/main/Screen%20Shot%202021-12-29%20at%2012.41.07%20PM.png)
+
